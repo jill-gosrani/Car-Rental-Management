@@ -22,7 +22,6 @@ public class CarService {
     }
 
     public String addCar(Car car) {
-        // TODO Auto-generated method stub
         carRepo.save(car);
         return "OK";
     }

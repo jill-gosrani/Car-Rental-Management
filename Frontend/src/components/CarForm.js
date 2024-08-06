@@ -12,10 +12,10 @@ const CarForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const newCar = { name, model, number, type, price };
-    console.log(newCar.name);
+    const newCar = { carName: name, carModel: model, carNumber: number, type, price };
+    console.log(newCar);
     try {
-      await axios.post('https://localhost:8080/cars/add', newCar);
+      await axios.post('http://localhost:8080/cars/add/', newCar);
       alert('Car added successfully!');
     } catch (error) {
       console.error('Error adding car:', error);

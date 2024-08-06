@@ -15,6 +15,15 @@ const Car = ({ car }) => {
           Type: {car.type} 
         </li>
         <li>
+          Available: Rs.{car.price} 
+        </li>
+        <li>
+          Insured: Rs.{car.price} 
+        </li>
+        <li>
+          Insured type: Rs.{car.price} 
+        </li>
+        <li>
           Price: Rs.{car.price} 
         </li>
       </ul>
