@@ -12,23 +12,23 @@ import com.jill.carRental.entity.Car;
 import com.jill.carRental.service.CarService;
 
 
-@RestController()
+@RestController("cars")
 public class CarController {
 
     @Autowired
     private CarService carService;
 
-    @GetMapping("/cars")
+    @GetMapping("/")
     public List<Car> getAllCars(){
         return carService.getAllCars();
     }
 
-    @GetMapping("/cars/{carID}")
+    @GetMapping("/{carID}")
     public Car getCarById(@PathVariable int carID){
         return carService.getCarById(carID);
     }
 
-    @PostMapping("cars/add/")
+    @PostMapping("/add/")
     public String addCar(@RequestBody Car car){
         return carService.addCar(car);
     }
